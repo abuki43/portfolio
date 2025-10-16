@@ -7,12 +7,12 @@ const About = () => {
     {
       icon: <FiCode className="w-6 h-6" />,
       title: "Frontend Development",
-      description: "React, JavaScript,Typescript, HTML/CSS, Tailwind CSS",
+      description: "JavaScript, Typescript, React, Next.js, Tailwind CSS",
     },
     {
       icon: <FiDatabase className="w-6 h-6" />,
       title: "Backend Development",
-      description: "Node.js, Express, MongoDB, REST API, MySql, Firebase,Postgres",
+      description: "Node.js, Express, NestJS, MongoDB, REST API, Postgres, Firebase, Supabase",
     },
     {
       icon: <FiLayout className="w-6 h-6" />,
@@ -35,9 +35,9 @@ const About = () => {
             About Me
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Hello, I'm Abubeker, a Junior Full-Stack Developer . I am a
-            third-year Information Systems student at Addis Ababa University.
-            Combined with my skills to develop in web and mobile development,
+            Hello, I'm Abubeker, Full-Stack Dev . I am a
+            Fourth-year Information Systems student at Addis Ababa University.
+            Combined with my skills to develop in web, mobile development and telegram bots,
             this allows me to create solutions that are both innovative and
             reliable.
           </p>
