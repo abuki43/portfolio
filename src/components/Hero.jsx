@@ -92,6 +92,22 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="flex justify-center mb-10"
+          >
+            <a
+              href="/Abubeker-Abe-Resume.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-medium shadow-lg shadow-primary/40 hover:shadow-primary/60 transition-shadow"
+              aria-label="Download Abubeker Abe resume"
+            >
+              Download Résumé
+            </a>
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
