@@ -1,0 +1,16 @@
+{
+  "name": "Abubeker Abe Portfolio",
+  "short_name": "Abe Portfolio",
+  "description": "The personal portfolio of Abubeker Abe, a full-stack developer building modern web and mobile solutions.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
