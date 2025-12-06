@@ -1,21 +1,15 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
-// import AbayBridge from "../assets/abay-bridge.svg";
+import { SectionDivider } from "./Ornaments";
 import AbayBridge from "../assets/abayBridge.png";
 import AddisFetch from "../assets/addisfetch.jpg";
-// import TopTrader from "../assets/topTrader.jpg";
-import Telescribe from "../assets/telescribe.png";
-import QrHotel from "../assets/qrhotel.png"
-import Private from "../assets/private.png"
-import TopTrader from "../assets/top.png"
+import Telescribe from "../assets/telescribe-logo-1.png";
+import QrHotel from "../assets/qrhotel.png";
+import Private from "../assets/private-removebg.png";
+import TopTrader from "../assets/wallet.png";
 
 const Projects = () => {
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
 
   const projects = [
     {
@@ -23,152 +17,170 @@ const Projects = () => {
       description:
         "Get what you need from abroad with ease! Our app connects you with travelers who can bring items directly to you from another country. Simply post your request, connect with travelers.",
       image: AddisFetch,
-      technologies: ["ReactNative", "Expo", "Firebase", "TailwindCSS"],
+      technologies: ["React Native", "Expo", "Firebase", "Tailwind CSS"],
       github: "",
       demo: "https://addis-fetchet.onrender.com/",
-      color: "from-orange-500 to-red-500",
     },
     {
       title: "TeleScribe",
       image: Telescribe,
-      description: "Monetize your Telegram channels with ease! TeleScribe is a web app that helps you manage private channels, streamline subscriptions, and maximize revenue effortlessly.",
-      technologies: ["Nextjs", "Prisma", "Postgres", "Shadcn", "TON"],
-      github: "",
+      description:
+        "Monetize your Telegram channels with ease! TeleScribe is a web app that helps you manage private channels, streamline subscriptions, and maximize revenue effortlessly.",
+      technologies: ["Next.js", "Prisma", "PostgreSQL", "Shadcn", "TON"],
+      github: "https://github.com/abuki43/TeleScribe",
       demo: "",
-      color: "from-blue-500 to-teal-500",
     },
     {
       title: "Abay Bridge",
-      description: "This educational platform connects learners and experts through a dynamic question-and-answer system, fostering seamless collaboration.",
+      description:
+        "This educational platform connects learners and experts through a dynamic question-and-answer system, fostering seamless collaboration.",
       image: AbayBridge,
-      technologies: ["React", "Node.js", "Express JS", "MongoDB"],
+      technologies: ["React", "Node.js", "Express", "MongoDB"],
       github: "",
       demo: "https://abay-bridge-1.onrender.com/",
-      color: "from-blue-500 to-teal-500",
     },
     {
       title: "QR-Hotel",
-      image:QrHotel,
-      description: "Transform hotel operations with QR-Hotel! This web app simplifies guest services, enabling seamless ordering, payments, and real-time system for a modern hospitality experience.",
-      technologies: ["React", "NodeJs", "Express", "MongoDB", "Chapa", "web socket"],
+      image: QrHotel,
+      description:
+        "Transform hotel operations with QR-Hotel! This web app simplifies guest services, enabling seamless ordering, payments, and real-time system for a modern hospitality experience.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Chapa", "WebSocket"],
       github: "",
       demo: "",
-      color: "from-orange-500 to-red-500",
     },
     {
       title: "PrivateBot",
-      description: "Manage your Telegram private channels with ease! PrivateBot is a mini-app that empowers you to control and organize your private channel bots effortlessly.",
-      technologies: ["Telegraf","NodeJS","ReactJs"],
-      image:Private,
+      description:
+        "Manage your Telegram private channels with ease! PrivateBot is a mini-app that empowers you to control and organize your private channel bots effortlessly.",
+      technologies: ["Telegraf", "Node.js", "React"],
+      image: Private,
       github: "https://github.com/abuki43/TelegramPaidChannelPayment",
       demo: "https://t.me/privateChannelOwner_bot",
-      color: "from-blue-500 to-teal-500",
     },
     {
       title: "Top Trader",
       description:
-        "A telegram bot that provides wallet analysis, find top traders from a token and filter out the best traders address based on your settings.",
+        "A telegram bot that provides wallet analysis, find top traders from a token and filter out the best traders address based on your settings on solana blockchain.",
       image: TopTrader,
-      technologies: ["Nodejs", "Telegram API", "MongoDB"],
+      technologies: ["Node.js", "Telegram API", "MongoDB"],
       github: "",
       demo: "",
-      color: "from-purple-600 via-pink-500 to-blue-500",
     },
+    {
+      title: "Yagout payment SDK",
+      description: "TypeScript SDKs for yagout payment integration. It supports aggregator hosted, api-based integration and payment link generation.It can be used with nextjs, nestjs, fastify and express",
+      image: "",
+      technologies: ["TypeScript", "Node.js", "Yagout "],
+      github: "",
+      demo: "",
+    }
   ];
 
-  // // Create progress transforms for each project
-  // const progressTransforms = projects.map((_, index) => 
-  //   useTransform(
-  //     scrollYProgress,
-  //     [index / projects.length, (index + 1) / projects.length],
-  //     [0, 1]
-  //   )
-  // );
+  const formatNumber = (num) => {
+    return num.toString().padStart(2, "0");
+  };
 
   return (
-    <section ref={containerRef} id="projects" className="py-20 px-6 relative">
-      <div className="container mx-auto">
+    <section ref={containerRef} id="projects" className="py-20 px-6">
+      <div className="container mx-auto max-w-6xl">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-20"
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 glitch-text">
+          <p className="caption mb-4">Portfolio</p>
+          <h2 className="font-heading text-4xl md:text-5xl font-semibold text-tobacco letterpress">
             Featured Work
           </h2>
         </motion.div>
 
-        <div className="space-y-32">
+        <SectionDivider />
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.article
               key={index}
-              className="relative group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="paper-card overflow-hidden group"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <motion.div
-                  initial={{ x: index % 2 ? 100 : -100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className={`relative overflow-hidden rounded-xl aspect-video ${
-                    index % 2 ? "lg:order-2" : ""
-                  }`}
-                >
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r ${project.color} opacity-20 group-hover:opacity-30 transition-opacity`}
-                  ></div>
+              {/* Project Image */}
+              <div className="relative aspect-video overflow-hidden halftone contain bg-sepia/5">
+                {project.image ? (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain sepia-image"
                   />
-                </motion.div>
-
-                <motion.div
-                  initial={{ x: index % 2 ? -100 : 100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className={`${index % 2 ? "lg:order-1" : ""}`}
-                >
-                  <h3 className="text-3xl dark:text-primary font-bold mb-4">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    {project.technologies.map((tech, i) => (
-                      <span
-                        key={i}
-                        className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${project.color} text-white`}
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center p-8 border-2 border-sepia/10 m-2">
+                    <h3 className="font-heading text-3xl md:text-4xl text-tobacco text-center leading-tight letterpress italic">
+                      {project.title}
+                    </h3>
                   </div>
-                  <div className="flex space-x-6">
-                    {project.github && (
-                      <motion.a
-                        href={project.github}
-                        whileHover={{ scale: 1.1 }}
-                        className="flex items-center text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-                      >
-                        <FiGithub className="w-6 h-6 mr-2" />
-                        Code
-                      </motion.a>
-                    )}
-                    {project.demo && (
-                      <motion.a
-                        href={project.demo}
-                        whileHover={{ scale: 1.1 }}
-                        className="flex items-center text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-                      >
-                        <FiExternalLink className="w-6 h-6 mr-2" />
-                        Live Demo
-                      </motion.a>
-                    )}
-                  </div>
-                </motion.div>
+                )}
               </div>
-            </motion.div>
+
+              {/* Project Content */}
+              <div className="p-6 md:p-8">
+                {/* Number & Title */}
+                <div className="flex items-baseline gap-4 mb-4">
+                  <span className="project-number">{formatNumber(index + 1)}.</span>
+                  <h3 className="font-heading text-2xl md:text-3xl font-semibold text-tobacco">
+                    {project.title}
+                  </h3>
+                </div>
+
+                {/* Description */}
+                <p className="font-body text-ink/80 mb-6 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-x-4 gap-y-2 mb-6">
+                  {project.technologies.map((tech, i) => (
+                    <span key={i} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex items-center gap-6 pt-4 border-t border-sepia/10">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-caption text-sm text-olive hover:text-tobacco transition-colors editorial-link"
+                    >
+                      View Code
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-caption text-sm text-olive hover:text-tobacco transition-colors editorial-link"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {!project.github && !project.demo && (
+                    <span className="font-caption text-sm text-sepia/50 italic">
+                      Private Project
+                    </span>
+                  )}
+                </div>
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>

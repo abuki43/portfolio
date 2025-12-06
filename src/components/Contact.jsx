@@ -1,62 +1,62 @@
 import { motion } from "framer-motion";
-import { FiMail } from "react-icons/fi";
+import { MailOrnament, SectionDivider } from "./Ornaments";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-6 relative overflow-hidden">
-      <div className="container mx-auto relative z-10">
+    <section id="contact" className="py-20 px-6 section-alt">
+      <div className="container mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 glitch-text">
+          <p className="caption mb-4">Contact</p>
+          <h2 className="font-heading text-4xl md:text-5xl font-semibold text-tobacco letterpress mb-6">
             Let's Create Together
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind? Let's bring your ideas to life.
-          </p>
         </motion.div>
+
+        <SectionDivider />
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-center"
         >
-          <div className="relative group">
-            <motion.a
-              href="mailto:contact@example.com"
-              whileHover={{ scale: 1.02 }}
-              className="block p-10 bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300"
+          {/* Intro text with drop cap */}
+          <p className="drop-cap font-body text-lg text-ink/80 leading-relaxed max-w-xl mx-auto mb-12">
+            Have a project in mind? I'm always open to discussing new
+            opportunities, creative ideas, or partnerships. Let's bring your
+            vision to life.
+          </p>
+
+          {/* Email with ornament */}
+          <div className="flex flex-col items-center gap-6">
+            <MailOrnament size={40} className="text-sepia opacity-60" />
+
+            <a
+              href="mailto:abubeker4310@gmail.com"
+              className="font-heading text-2xl md:text-3xl text-tobacco hover:text-olive transition-colors editorial-link"
             >
-              <div className="flex items-center justify-center space-x-4">
-                <FiMail className="w-8 h-8 text-primary" />
-                <span className="text-2xl font-medium">
-                  Abubeker4310@gmail.com
-                </span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300" />
-            </motion.a>
+              Abubeker4310@gmail.com
+            </a>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-center mt-12"
+          {/* Availability note */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            viewport={{ once: true }}
+            className="font-body text-sepia italic mt-12"
           >
-            <p className="text-gray-600 dark:text-gray-300">
-              Available for freelance opportunities and exciting projects
-            </p>
-          </motion.div>
+            Available for freelance opportunities and exciting projects
+          </motion.p>
         </motion.div>
-      </div>
-
-      <div className="absolute inset-0 dark:opacity-30 opacity-10">
-        <div className="absolute right-0 bottom-0 w-96 h-96 bg-primary/30 rounded-full filter blur-3xl"></div>
-        <div className="absolute left-0 top-0 w-96 h-96 bg-secondary/30 rounded-full filter blur-3xl"></div>
       </div>
     </section>
   );

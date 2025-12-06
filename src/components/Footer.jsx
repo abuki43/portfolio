@@ -1,39 +1,37 @@
-import { FiGithub, FiLinkedin, FiTwitter, FiSend } from "react-icons/fi";
+import { BulletSeparator } from "./Ornaments";
 
 const Footer = () => {
+  const socialLinks = [
+    { name: "GitHub", url: "https://github.com/abuki43" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/abubeker-abe-bb2325285?" },
+    { name: "Telegram", url: "https://t.me/ABking1" },
+  ];
+
   return (
-    <footer className="bg-white dark:bg-dark py-8 px-6">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-0">
+    <footer className="py-12 px-6 border-t border-sepia/10">
+      <div className="container mx-auto max-w-4xl">
+        <div className="flex flex-col items-center gap-6">
+          {/* Social Links */}
+          <div className="flex flex-wrap justify-center items-center">
+            {socialLinks.map((link, index) => (
+              <span key={link.name} className="inline-flex items-center">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-caption text-sm text-sepia hover:text-tobacco transition-colors"
+                >
+                  {link.name}
+                </a>
+                {index < socialLinks.length - 1 && <BulletSeparator />}
+              </span>
+            ))}
+          </div>
+
+          {/* Copyright */}
+          <p className="font-caption text-xs text-sepia/60 small-caps tracking-wider">
             © 2025 Abubeker Abe. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-            >
-              <FiGithub className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/abubeker-abe-bb2325285?"
-              className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-            >
-              <FiLinkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-            >
-              <FiTwitter className="w-5 h-5" />
-            </a>
-            <a
-              href="https://t.me/ABking1"
-              className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
-            >
-              <FiSend className="w-5 h-5" />
-            </a>
-          </div>
         </div>
       </div>
     </footer>

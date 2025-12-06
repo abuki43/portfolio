@@ -1,27 +1,29 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
-import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = ['Home', 'About', 'Projects', 'Contact'];
 
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed w-full bg-parchment/95 backdrop-blur-sm z-50 border-b border-sepia/10">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <Link 
-            to="home" 
+          {/* Brand Name - Editorial Style */}
+          <Link
+            to="home"
             spy={true}
-            smooth={true} 
+            smooth={true}
             duration={500}
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent cursor-pointer"
+            className="font-heading text-xl font-semibold text-tobacco tracking-wide cursor-pointer small-caps"
           >
-            DevPortfolio
+            Abubeker Abe
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-10">
             {menuItems.map((item) => (
               <Link
                 key={item}
@@ -29,30 +31,20 @@ const Navbar = ({ theme, toggleTheme }) => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                offset={-100}
-                className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
+                offset={-80}
+                className="nav-link cursor-pointer"
               >
                 {item}
               </Link>
             ))}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              {theme === 'light' ? <FiMoon className="w-5 h-5" /> : <FiSun className="w-5 h-5 text-gray-300" />}
-            </button>
           </div>
 
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={toggleTheme}
-              className="p-2 mr-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              {theme === 'light' ? <FiMoon className="w-5 h-5" /> : <FiSun className="w-5 h-5 text-gray-300" />}
-            </button>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 text-sepia hover:text-tobacco transition-colors"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
             </button>
@@ -61,17 +53,18 @@ const Navbar = ({ theme, toggleTheme }) => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4">
-            {menuItems.map((item) => (
+          <div className="md:hidden mt-6 pb-4 border-t border-sepia/10 pt-4">
+            {menuItems.map((item, index) => (
               <Link
                 key={item}
                 to={item.toLowerCase()}
                 spy={true}
                 smooth={true}
                 duration={500}
-                offset={-100}
-                className="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
+                offset={-80}
+                className="block py-3 font-heading text-lg text-sepia hover:text-tobacco transition-colors cursor-pointer"
                 onClick={() => setIsOpen(false)}
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 {item}
               </Link>

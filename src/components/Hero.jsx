@@ -1,140 +1,93 @@
 import { motion } from "framer-motion";
-import {
-  FiGithub,
-  FiLinkedin,
-  FiTwitter,
-  FiSend,
-  FiInstagram,
-} from "react-icons/fi";
-import { useEffect, useRef } from "react";
+import { SectionDivider, BulletSeparator } from "./Ornaments";
 
 const Hero = () => {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const nameRef = useRef(null);
-
-  const socialIcons = [
-    { icon: FiGithub, link: "" },
-    {
-      icon: FiLinkedin,
-      link: "https://www.linkedin.com/in/abubeker-abe-bb2325285?",
-    },
-    { icon: FiSend, link: "https://t.me/ABking1" },
-    { icon: FiInstagram, link: "https://www.instagram.com/abuki431/" },
+  const socialLinks = [
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/abubeker-abe-bb2325285?" },
+    { name: "Telegram", url: "https://t.me/ABking1" },
+    { name: "Instagram", url: "https://www.instagram.com/abuki431/" },
+    { name: "GitHub", url: "https://github.com/abuki43" },
   ];
-
-  const scrambleText = (element) => {
-    let iterations = 0;
-    const interval = setInterval(() => {
-      element.innerText = element.innerText
-        .split("")
-        .map((letter, index) => {
-          if (index < iterations) {
-            return element.dataset.value[index];
-          }
-          return letters[Math.floor(Math.random() * 26)];
-        })
-        .join("");
-
-      if (iterations >= element.dataset.value.length) {
-        clearInterval(interval);
-      }
-      iterations += 1 / 3;
-    }, 30);
-  };
-
-  useEffect(() => {
-    if (nameRef.current) {
-      setTimeout(() => {
-        scrambleText(nameRef.current);
-      }, 500); // Delay the initial animation
-    }
-  }, []);
-
-  const handleMouseOver = (event) => {
-    scrambleText(event.target);
-  };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="min-h-screen flex items-center justify-center pt-20"
     >
-      <div className="absolute inset-0 w-full h-full dark:opacity-20 opacity-10">
-        <div className="absolute w-96 h-96 bg-primary/30 rounded-full filter blur-3xl animate-blob"></div>
-        <div className="absolute w-96 h-96 bg-secondary/30 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute w-96 h-96 bg-purple-300/30 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 py-20">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center max-w-3xl mx-auto"
         >
-          <h1
-            ref={nameRef}
-            className="glitch-text text-6xl md:text-8xl font-bold mb-6 cursor-default"
-            data-value="ABUBEKER ABE"
-            onMouseOver={handleMouseOver}
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="caption mb-6"
           >
-            ABUBEKER ABE
+            Full-Stack Developer
+          </motion.p>
+
+          {/* Main Title */}
+          <h1 className="font-heading text-display-sm md:text-display font-semibold text-tobacco mb-8 letterpress">
+            Abubeker Abe
           </h1>
 
+          {/* Tagline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="font-body text-xl md:text-2xl text-ink/80 mb-10 leading-relaxed italic"
           >
             Crafting digital solutions that solve real-world problems and push
             the boundaries of full stack development.
           </motion.p>
 
+          {/* Flourish Divider */}
+          <SectionDivider className="my-10" />
+
+          {/* Resume Link */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="flex justify-center mb-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="mb-10"
           >
             <a
               href="/Abubeker-Abe-Resume.pdf"
               download
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-medium shadow-lg shadow-primary/40 hover:shadow-primary/60 transition-shadow"
+              className="inline-block font-heading text-lg text-olive hover:text-tobacco transition-colors editorial-link"
               aria-label="Download Abubeker Abe resume"
             >
               Download Résumé
             </a>
           </motion.div>
 
+          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="flex justify-center space-x-6"
+            transition={{ delay: 0.8 }}
+            className="flex flex-wrap justify-center items-center gap-x-1 gap-y-2"
           >
-            {socialIcons.map((Social, index) => (
-              <motion.a
-                key={index}
-                href={Social.link}
-                className="social-icon-link"
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Social.icon className="w-8 h-8" />
-              </motion.a>
+            {socialLinks.map((link, index) => (
+              <span key={link.name} className="inline-flex items-center">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-caption text-sm text-sepia hover:text-tobacco transition-colors"
+                >
+                  {link.name}
+                </a>
+                {index < socialLinks.length - 1 && <BulletSeparator />}
+              </span>
             ))}
           </motion.div>
-        </motion.div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="scroll-indicator"
-        >
-          <span className="sr-only">Scroll down</span>
         </motion.div>
       </div>
     </section>
