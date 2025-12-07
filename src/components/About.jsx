@@ -51,16 +51,16 @@ const About = () => {
           {/* Skills as elegant inline list */}
           <div className="border-t border-sepia/20 pt-8">
             <p className="caption mb-6 text-center">Areas of Expertise</p>
-            <p className="font-body text-center text-sepia leading-loose">
+            <div className="flex flex-wrap justify-center font-body text-sepia leading-loose">
               {skills.map((skill, index) => (
-                <span key={skill}>
+                <span key={skill} className="inline-flex items-center mr-3 mb-2">
                   {skill}
                   {index < skills.length - 1 && (
-                    <span className="mx-2 opacity-40">·</span>
+                    <span className="ml-3 opacity-40">·</span>
                   )}
                 </span>
               ))}
-            </p>
+            </div>
           </div>
         </motion.div>
       </div>
