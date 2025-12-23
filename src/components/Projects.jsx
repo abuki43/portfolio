@@ -100,7 +100,7 @@ const Projects = () => {
         >
           <p className="caption mb-4">Portfolio</p>
           <h2 className="font-heading text-4xl md:text-5xl font-semibold text-tobacco letterpress">
-            Featured Work
+            Featured Personal Works
           </h2>
         </motion.div>
 
