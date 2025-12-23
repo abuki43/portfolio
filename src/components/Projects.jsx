@@ -30,14 +30,21 @@ const Projects = () => {
       github: "https://github.com/abuki43/TeleScribe",
       demo: "",
     },
+    // {
+    //   title: "Abay Bridge",
+    //   description:
+    //     "This educational platform connects learners and experts through a dynamic question-and-answer system, fostering seamless collaboration.",
+    //   image: AbayBridge,
+    //   technologies: ["React", "Node.js", "Express", "MongoDB"],
+    //   github: "",
+    //   demo: "https://abay-bridge-1.onrender.com/",
+    // },
     {
-      title: "Abay Bridge",
-      description:
-        "This educational platform connects learners and experts through a dynamic question-and-answer system, fostering seamless collaboration.",
-      image: AbayBridge,
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      github: "",
-      demo: "https://abay-bridge-1.onrender.com/",
+      title:"ProjeX",
+      image:"",
+      description:"A Simple and clean project management application built with Next.js that helps teams organize and track their work using a Kanban board interface.",
+      technologies:["Nextjs","Supabase"],
+      github:"https://github.com/abuki43/ProjeX"
     },
     {
       title: "QR-Hotel",
