@@ -35,7 +35,7 @@ const About = () => {
         >
           {/* Main content with drop cap */}
           <p className="drop-cap font-body text-lg text-ink leading-relaxed mb-8">
-            Hello, I'm Abubeker—a Full-Stack Developer and fourth-year Information Systems
+            Hello, I&apos;m Abubeker—a Full-Stack Developer and fourth-year Information Systems
             student at Addis Ababa University. My craft lies in weaving together web applications,
             mobile experiences, and automation tools that bridge the gap between elegant design
             and robust functionality. Each project I undertake is an opportunity to create

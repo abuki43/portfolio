@@ -1,7 +1,7 @@
-import React from 'react';
+type WithClassName = { className?: string };
 
 // Elegant flourish divider
-export const Flourish = ({ className = '' }) => (
+export const Flourish = ({ className = '' }: WithClassName) => (
     <div className={`flourish ${className}`}>
         <svg
             width="24"
@@ -22,7 +22,9 @@ export const Flourish = ({ className = '' }) => (
 );
 
 // Star ornament for accent
-export const StarOrnament = ({ size = 16, className = '' }) => (
+type StarOrnamentProps = { size?: number; className?: string };
+
+export const StarOrnament = ({ size = 16, className = '' }: StarOrnamentProps) => (
     <svg
         width={size}
         height={size}
@@ -39,7 +41,9 @@ export const StarOrnament = ({ size = 16, className = '' }) => (
 );
 
 // Decorative corner ornament
-export const CornerOrnament = ({ className = '', flip = false }) => (
+type CornerOrnamentProps = { className?: string; flip?: boolean };
+
+export const CornerOrnament = ({ className = '', flip = false }: CornerOrnamentProps) => (
     <svg
         width="40"
         height="40"
@@ -68,7 +72,7 @@ export const CornerOrnament = ({ className = '', flip = false }) => (
 );
 
 // Section divider with ornament
-export const SectionDivider = ({ className = '' }) => (
+export const SectionDivider = ({ className = '' }: WithClassName) => (
     <div className={`flex items-center justify-center py-8 ${className}`}>
         <div className="flex-1 max-w-[120px] h-px bg-gradient-to-r from-transparent to-sepia opacity-30" />
         <StarOrnament size={12} className="mx-4 text-sepia opacity-40" />
@@ -77,7 +81,9 @@ export const SectionDivider = ({ className = '' }) => (
 );
 
 // Mail ornament for contact section
-export const MailOrnament = ({ size = 32, className = '' }) => (
+type MailOrnamentProps = { size?: number; className?: string };
+
+export const MailOrnament = ({ size = 32, className = '' }: MailOrnamentProps) => (
     <svg
         width={size}
         height={size}
@@ -108,6 +114,6 @@ export const MailOrnament = ({ size = 32, className = '' }) => (
 );
 
 // Bullet separator for inline lists
-export const BulletSeparator = ({ className = '' }) => (
+export const BulletSeparator = ({ className = '' }: WithClassName) => (
     <span className={`mx-3 text-sepia opacity-40 ${className}`}>•</span>
 );

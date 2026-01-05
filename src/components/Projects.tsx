@@ -1,17 +1,25 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { SectionDivider } from "./Ornaments";
-import AbayBridge from "../assets/abayBridge.png";
 import AddisFetch from "../assets/addisfetch.jpg";
 import Telescribe from "../assets/telescribe-logo-1.png";
 import QrHotel from "../assets/qrhotel.png";
 import Private from "../assets/private-removebg.png";
 import TopTrader from "../assets/wallet.png";
 
-const Projects = () => {
-  const containerRef = useRef(null);
+type Project = {
+  title: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+  github?: string;
+  demo?: string;
+};
 
-  const projects = [
+const Projects = () => {
+  const containerRef = useRef<HTMLElement | null>(null);
+
+  const projects: Project[] = [
     {
       title: "Addis Fetch",
       description:
@@ -44,7 +52,8 @@ const Projects = () => {
       image:"",
       description:"A Simple and clean project management application built with Next.js that helps teams organize and track their work using a Kanban board interface.",
       technologies:["Nextjs","Supabase"],
-      github:"https://github.com/abuki43/ProjeX"
+      github:"https://github.com/abuki43/ProjeX",
+      demo: "",
     },
     {
       title: "QR-Hotel",
@@ -83,7 +92,7 @@ const Projects = () => {
     }
   ];
 
-  const formatNumber = (num) => {
+  const formatNumber = (num: number) => {
     return num.toString().padStart(2, "0");
   };
 

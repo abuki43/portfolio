@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 
-const Cursor = ({ mousePosition }) => {
+type CursorProps = {
+  mousePosition: { x: number; y: number };
+};
+
+const Cursor = ({ mousePosition }: CursorProps) => {
   return (
     <>
       {/* Ink dot - small refined dot */}

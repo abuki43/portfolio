@@ -14,7 +14,7 @@ const Contact = () => {
         >
           <p className="caption mb-4">Contact</p>
           <h2 className="font-heading text-4xl md:text-5xl font-semibold text-tobacco letterpress mb-6">
-            Let's Create Together
+            Let&apos;s Create Together
           </h2>
         </motion.div>
 
@@ -29,8 +29,8 @@ const Contact = () => {
         >
           {/* Intro text with drop cap */}
           <p className="drop-cap font-body text-lg text-ink/80 leading-relaxed max-w-xl mx-auto mb-12">
-            Have a project in mind? I'm always open to discussing new
-            opportunities, creative ideas, or partnerships. Let's bring your
+            Have a project in mind? I&apos;m always open to discussing new
+            opportunities, creative ideas, or partnerships. Let&apos;s bring your
             vision to life.
           </p>
 

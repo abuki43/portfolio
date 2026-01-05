@@ -7,11 +7,13 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
 
+type MousePosition = { x: number; y: number };
+
 function App() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
