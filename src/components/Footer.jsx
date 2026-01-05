@@ -30,7 +30,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="font-caption text-xs text-sepia/60 small-caps tracking-wider">
-            © 2025 Abubeker Abe. All rights reserved.
+            © 2026 Abubeker Abe. All rights reserved.
           </p>
         </div>
       </div>
