@@ -6,6 +6,8 @@ import Telescribe from "../assets/telescribe-logo-1.png";
 import QrHotel from "../assets/qrhotel.png";
 import Private from "../assets/private-removebg.png";
 import TopTrader from "../assets/wallet.png";
+import USDCentral from "../assets/USDCentral.png";
+import ExitLogo from "../assets/exitLogo.png";
 
 type Project = {
   title: string;
@@ -30,6 +32,14 @@ const Projects = () => {
       demo: "https://addis-fetchet.onrender.com/",
     },
     {
+      title: "Yagout payment SDK",
+      description: "TypeScript SDKs for yagout payment integration. It supports aggregator hosted, api-based integration and payment link generation.It can be used with nextjs, nestjs, fastify and express",
+      image: "",
+      technologies: ["TypeScript", "Node.js", "Yagout "],
+      github: "",
+      demo: "",
+    },
+    {
       title: "TeleScribe",
       image: Telescribe,
       description:
@@ -37,6 +47,13 @@ const Projects = () => {
       technologies: ["Next.js", "Prisma", "PostgreSQL", "Shadcn", "TON"],
       github: "https://github.com/abuki43/TeleScribe",
       demo: "",
+    },{
+      title:"ExitExamStudio",
+      image:ExitLogo,
+      description:"Exit Exam studio is web app that provides past exit exam questions for Ethiopian universities students. It allows students to practice for their exams. OVer 900+ students have used the app to prepare for their exit exams.",
+      technologies:["Nextjs"],
+      demo:"exitexamstudio.app",
+      github:"",
     },
     // {
     //   title: "Abay Bridge",
@@ -65,6 +82,13 @@ const Projects = () => {
       demo: "",
     },
     {
+      title:"USDCentral",
+      description:"A chain abstracted USDC wallet. Built for ETHGLOBAL hackathon. It allows users to create and manage USDC wallets across multiple blockchains with a single interface.",
+      technologies:["ReactNative","Expo","Circle SDK","LIFI SDK","Curve finance"],
+      image:USDCentral,
+      github:"https://github.com/abuki43/USDCentral"
+    },
+    {
       title: "PrivateBot",
       description:
         "Manage your Telegram private channels with ease! PrivateBot is a mini-app that empowers you to control and organize your private channel bots effortlessly.",
@@ -79,14 +103,6 @@ const Projects = () => {
         "A telegram bot that provides wallet analysis, find top traders from a token and filter out the best traders address based on your settings on solana blockchain.",
       image: TopTrader,
       technologies: ["Node.js", "Telegram API", "MongoDB"],
-      github: "",
-      demo: "",
-    },
-    {
-      title: "Yagout payment SDK",
-      description: "TypeScript SDKs for yagout payment integration. It supports aggregator hosted, api-based integration and payment link generation.It can be used with nextjs, nestjs, fastify and express",
-      image: "",
-      technologies: ["TypeScript", "Node.js", "Yagout "],
       github: "",
       demo: "",
     }
