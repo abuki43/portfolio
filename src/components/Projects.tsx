@@ -50,7 +50,7 @@ const Projects = () => {
     },{
       title:"ExitExamStudio",
       image:ExitLogo,
-      description:"Exit Exam studio is web app that provides past exit exam questions for Ethiopian universities students. It allows students to practice for their exams. Over 1200+ students have used the app to prepare for their exit exams.",
+      description:"Exit Exam studio is web app that provides past exit exam questions for Ethiopian universities students. It allows students to practice for their exams. Over 3500+ students have used the app to prepare for their exit exams.",
       technologies:["Nextjs"],
       demo:"exitexamstudio.app",
       github:"",
