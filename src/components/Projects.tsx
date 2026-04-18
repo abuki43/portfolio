@@ -97,15 +97,15 @@ const Projects = () => {
       github: "https://github.com/abuki43/TelegramPaidChannelPayment",
       demo: "https://t.me/privateChannelOwner_bot",
     },
-    {
-      title: "Top Trader",
-      description:
-        "A telegram bot that provides wallet analysis, find top traders from a token and filter out the best traders address based on your settings on solana blockchain.",
-      image: TopTrader,
-      technologies: ["Node.js", "Telegram API", "MongoDB"],
-      github: "",
-      demo: "",
-    }
+    // {
+    //   title: "Top Trader",
+    //   description:
+    //     "A telegram bot that provides wallet analysis, find top traders from a token and filter out the best traders address based on your settings on solana blockchain.",
+    //   image: TopTrader,
+    //   technologies: ["Node.js", "Telegram API", "MongoDB"],
+    //   github: "",
+    //   demo: "",
+    // }
   ];
 
   const formatNumber = (num: number) => {
