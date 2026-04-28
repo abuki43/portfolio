@@ -38,15 +38,6 @@ const Projects = () => {
       technologies: ["TypeScript", "Node.js", "Yagout "],
       github: "",
       demo: "",
-    },
-    {
-      title: "TeleScribe",
-      image: Telescribe,
-      description:
-        "Monetize your Telegram channels with ease! TeleScribe is a web app that helps you manage private channels, streamline subscriptions, and maximize revenue effortlessly.",
-      technologies: ["Next.js", "Prisma", "PostgreSQL", "Shadcn", "TON"],
-      github: "https://github.com/abuki43/TeleScribe",
-      demo: "",
     },{
       title:"ExitExamStudio",
       image:ExitLogo,
@@ -54,6 +45,23 @@ const Projects = () => {
       technologies:["Nextjs"],
       demo:"exitexamstudio.app",
       github:"",
+    },
+    {
+      title:"ETBX",
+      image:"",
+      description: "ETBX is full Stablecoin infrastructure. It provides user friendly interface for users to mint, redeem and transfer stablecoins. It also provides API for developers to integrate stablecoin functionality into their applications.",
+      technologies: ["Solidity","Nextjs","NeoDB","BASE chain","TurboRepo"],
+      github:"https://github.com/abuki43/ETBX",
+      demo:"",
+    },
+    {
+      title: "TeleScribe",
+      image: Telescribe,
+      description:
+        "Monetize your Telegram channels with ease! TeleScribe is a web app and telegramBot that helps you manage private channels, streamline subscriptions, and maximize revenue effortlessly.",
+      technologies: ["Next.js", "Prisma", "PostgreSQL", "Shadcn", "TON","Telegraf", "Node.js","Stripe", "Privy wallet"],
+      // github: "https://github.com/abuki43/TeleScribe",
+      demo: "",
     },
     // {
     //   title: "Abay Bridge",
@@ -67,7 +75,7 @@ const Projects = () => {
     {
       title:"ProjeX",
       image:"",
-      description:"A Simple and clean project management application built with Next.js that helps teams organize and track their work using a Kanban board interface.",
+      description:"A Modern and clean project management application built with Next.js that helps teams organize and track their work using a Kanban board interface.",
       technologies:["Nextjs","Supabase"],
       github:"https://github.com/abuki43/ProjeX",
       demo: "",
@@ -88,15 +96,15 @@ const Projects = () => {
       image:USDCentral,
       github:"https://github.com/abuki43/USDCentral"
     },
-    {
-      title: "PrivateBot",
-      description:
-        "Manage your Telegram private channels with ease! PrivateBot is a mini-app that empowers you to control and organize your private channel bots effortlessly.",
-      technologies: ["Telegraf", "Node.js", "React"],
-      image: Private,
-      github: "https://github.com/abuki43/TelegramPaidChannelPayment",
-      demo: "https://t.me/privateChannelOwner_bot",
-    },
+    // {
+    //   title: "PrivateBot",
+    //   description:
+    //     "Manage your Telegram private channels with ease! PrivateBot is a mini-app that empowers you to control and organize your private channel bots effortlessly.",
+    //   technologies: ["Telegraf", "Node.js", "React"],
+    //   image: Private,
+    //   github: "https://github.com/abuki43/TelegramPaidChannelPayment",
+    //   demo: "https://t.me/privateChannelOwner_bot",
+    // },
     // {
     //   title: "Top Trader",
     //   description:
