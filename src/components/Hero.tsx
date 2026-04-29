@@ -58,7 +58,7 @@ const Hero = () => {
             className="mb-10"
           >
             <a
-              href="/Abubeker-Abe-Resume.pdf"
+              href="/Abubeker_Abe_Resume.pdf"
               download
               className="inline-block font-heading text-lg text-olive hover:text-tobacco transition-colors editorial-link"
               aria-label="Download Abubeker Abe resume"
