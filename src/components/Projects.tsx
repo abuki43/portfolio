@@ -51,8 +51,8 @@ const Projects = () => {
       image:"",
       description: "ETBX is full Stablecoin infrastructure. It provides user friendly interface for users to mint, redeem and transfer stablecoins. It also provides API for developers to integrate stablecoin functionality into their applications.",
       technologies: ["Solidity","Nextjs","NeoDB","BASE chain","TurboRepo"],
-      github:"https://github.com/abuki43/ETBX",
-      demo:"",
+      // github:"https://github.com/abuki43/ETBX",
+      demo:"https://etbx.vercel.app",
     },
     {
       title: "TeleScribe",
