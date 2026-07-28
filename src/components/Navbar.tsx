@@ -44,10 +44,10 @@ const Navbar = () => {
                     exit={{ opacity: 0, y: 10, scale: 0.85, x: "-50%" }}
                     transition={{ duration: 0.15 }}
                     className={`absolute left-1/2 pointer-events-none px-2.5 py-1 text-[10px] font-mono rounded shadow border font-bold tracking-wider z-50 ${theme === "blueprint"
-                        ? "bg-paper-alt border-primary/40 text-primary"
-                        : theme === "monospace"
-                          ? "bg-black border-secondary text-accent"
-                          : "bg-paper-alt border-sepia/30 text-ink"
+                      ? "bg-paper-alt border-primary/40 text-primary"
+                      : theme === "monospace"
+                        ? "bg-black border-secondary text-accent"
+                        : "bg-paper-alt border-sepia/30 text-ink"
                       }`}
                   >
                     {theme === "monospace" ? `${item.name.toUpperCase()}.EXE` : item.name}
@@ -64,6 +64,7 @@ const Navbar = () => {
                 offset={-40}
                 onClick={() => playBell()}
                 className="cursor-none block"
+                aria-label={`Scroll to ${item.name} section`}
               >
                 <motion.div
                   animate={{
@@ -72,10 +73,10 @@ const Navbar = () => {
                   }}
                   transition={{ type: "spring", stiffness: 350, damping: 15 }}
                   className={`w-11 h-11 rounded-full flex items-center justify-center border transition-all duration-300 ${theme === "blueprint"
-                      ? "border-primary/25 bg-paper hover:border-primary text-primary"
-                      : theme === "monospace"
-                        ? "border-secondary/25 bg-paper-alt hover:border-primary text-secondary hover:text-primary"
-                        : "border-sepia/20 bg-cream hover:border-sepia text-primary"
+                    ? "border-primary/25 bg-paper hover:border-primary text-primary"
+                    : theme === "monospace"
+                      ? "border-secondary/25 bg-paper-alt hover:border-primary text-secondary hover:text-primary"
+                      : "border-sepia/20 bg-cream hover:border-sepia text-primary"
                     }`}
                 >
                   {item.icon}
