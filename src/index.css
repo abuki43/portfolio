@@ -9,18 +9,96 @@
    ======================================== */
 
 :root {
-  --color-parchment: #f5f0e8;
-  --color-cream: #ebe5d8;
-  --color-sepia: #8b7355;
-  --color-tobacco: #5c4033;
-  --color-olive: #6b7c5a;
-  --color-navy: #2c3e50;
-  --color-ink: #3d3229;
+  --color-paper: #FAF7F0;
+  --color-paper-alt: #F0EDE4;
+  --color-text: #1E2D3B;
+  --color-primary: #2B4E63;
+  --color-secondary: #7A8B99;
+  --color-accent: #D15A3C;
+  --color-grid-line: rgba(43, 78, 99, 0.07);
+  --font-current-body: 'Inter', system-ui, sans-serif;
+  --font-current-heading: 'Inter', system-ui, sans-serif;
+  --mix-blend-mode: multiply;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base grid pattern for default Gazette Vellum Theme */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+  background-image:
+    linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.theme-blueprint {
+  --color-paper: #081B29;
+  --color-paper-alt: #040E16;
+  --color-text: #8CBADE;
+  --color-primary: #00E5FF;
+  --color-secondary: #3E627C;
+  --color-accent: #FCBA12;
+  --color-grid-line: rgba(0, 229, 255, 0.08);
+  --font-current-body: Courier, monospace;
+  --font-current-heading: Courier, monospace;
+  --mix-blend-mode: screen;
+}
+
+.theme-blueprint::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(circle, var(--color-primary) 0.5px, transparent 0.5px),
+    linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
+  background-size: 48px 48px, 16px 16px, 16px 16px;
+}
+
+.theme-monospace {
+  --color-paper: #090B0E;
+  --color-paper-alt: #050608;
+  --color-text: #B4B7C5;
+  --color-primary: #FF8F00;
+  --color-secondary: #5E6477;
+  --color-accent: #39FF14;
+  --color-grid-line: rgba(255, 143, 0, 0.06);
+  --font-current-body: Courier, monospace;
+  --font-current-heading: Courier, monospace;
+  --mix-blend-mode: screen;
+}
+
+.theme-monospace::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  background-image:
+    radial-gradient(circle, var(--color-grid-line) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 html {
@@ -33,11 +111,12 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--color-parchment);
-  color: var(--color-ink);
-  font-family: 'Source Serif Pro', Georgia, serif;
+  background-color: var(--color-paper);
+  color: var(--color-text);
+  font-family: var(--font-current-body), sans-serif;
   line-height: 1.75;
   cursor: none;
+  position: relative;
 }
 
 /* ========================================
@@ -47,18 +126,18 @@ body {
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background-color: var(--color-tobacco);
+  background-color: var(--color-primary);
   position: fixed;
   pointer-events: none;
   border-radius: 50%;
   z-index: 9999;
-  mix-blend-mode: multiply;
+  mix-blend-mode: var(--mix-blend-mode);
 }
 
 .cursor-ring {
   width: 36px;
   height: 36px;
-  border: 1.5px solid var(--color-sepia);
+  border: 1.5px solid var(--color-secondary);
   position: fixed;
   pointer-events: none;
   border-radius: 50%;
@@ -438,13 +517,13 @@ a:hover {
    ======================================== */
 
 ::selection {
-  background-color: var(--color-olive);
-  color: var(--color-parchment);
+  background-color: var(--color-primary);
+  color: var(--color-paper);
 }
 
 ::-moz-selection {
-  background-color: var(--color-olive);
-  color: var(--color-parchment);
+  background-color: var(--color-primary);
+  color: var(--color-paper);
 }
 
 /* ========================================
@@ -456,14 +535,49 @@ a:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-cream);
+  background: var(--color-paper-alt);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-sepia);
+  background: var(--color-secondary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-tobacco);
+  background: var(--color-primary);
+}
+
+/* ========================================
+   CAD & 3D Perspective Utilities
+   ======================================== */
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.blueprint-border {
+  border: 1px solid var(--color-grid-line);
+}
+
+.cursor-cross {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: var(--mix-blend-mode);
+}
+
+/* Glass dock blur styling */
+.glass-dock {
+  background-color: rgba(var(--color-paper-alt), 0.1);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid rgba(var(--color-secondary), 0.15);
 }
