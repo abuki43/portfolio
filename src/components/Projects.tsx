@@ -93,7 +93,7 @@ const Projects = () => {
     {
       title: "Addis Fetch",
       category: "DECENTRALIZED COMMERCE // EXPORT DISPATCH",
-      releaseDate: "OCT 2024",
+      releaseDate: "JULY 2024",
       description: "Bridges global flight routes to direct local shipping requests. Item seekers submit parameters while active travelers bid routes.",
       details: "Addis Fetch scales international shipping networks by matching individual requests to immediate traveler routes. Constructed in React Native (Expo) and backed by optimized Firebase nodes, it implements off-grid offline support, real-time message sync, and coordinate flight logging. It successfully cuts standard forwarding costs by 70%.",
       image: AddisFetch,
@@ -111,7 +111,7 @@ const Projects = () => {
     {
       title: "ExitExamStudio",
       category: "ACADEMIC TESTING // PREPARATION WIDGET",
-      releaseDate: "JAN 2025",
+      releaseDate: "NOV 2025",
       description: "Scale prep portal web engine serving 15,000+ national graduating university students. Resilient load under low-bandwidth networks.",
       details: "ExitExamStudio supplies scalable digital prep desks for Ethiopian graduates. Engineered on Next.js server routers using a performance-tuned PostgreSQL state engine, the client delivers lightweight interactive worksheets and smart mock-rank trackers to verify student readiness. High availability on bandwidth-constrained local infrastructures.",
       image: ExitLogo,
@@ -129,7 +129,7 @@ const Projects = () => {
     {
       title: "ETBX Coin Interface",
       category: "STABLE DEFI LEDGER // PROTOCOL DRAFT",
-      releaseDate: "DEC 2024",
+      releaseDate: "FEB 2026",
       description: "Decentralized stable assets system dashboard permitting users to mint, redeem and transfer custom assets on BASE.",
       details: "ETBX DeFi dashboard enables direct management of stable contracts on the BASE chain. Users connect smart wallets and interact directly with minting scripts. Features nested developer API tools and integrated TurboRepo pipelines to secure strict codebase architecture across dependencies.",
       image: "",
@@ -165,7 +165,7 @@ const Projects = () => {
     {
       title: "Yagout payment SDK",
       category: "PAYMENT INTEGRATION // DEVPACK MODULE",
-      releaseDate: "SEPT 2024",
+      releaseDate: "SEPT 2025",
       description: "TypeScript developer SDK supporting payment aggregations, checkout portals, and custom web links.",
       details: "Yagout payment SDK is a highly lightweight pack optimized for Next.js, Express, and NestJS runtimes. Zero exterior dependencies are implemented to ensure the script triggers checkouts with minimal memory consumption.",
       image: "",
@@ -218,7 +218,7 @@ const Projects = () => {
     {
       title: "USDCentral Wallet",
       category: "CROSS-CHAIN ABSTRACT // EXPERIMENT",
-      releaseDate: "MAY 2024",
+      releaseDate: "JAN 2026",
       description: "Multi-chain abstracted gas-free wallet drafted for the ETHGlobal hackathon, eliminating native gas tokens.",
       details: "USDCentral was created for the ETHGlobal hackathon. Using LiFi bridges and Curve routing, users interact with USDC across Base, Arbitrum, and Optimism networks without holding gas tokens. Circle smart SDK manages payload safety.",
       image: USDCentral,
