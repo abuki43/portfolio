@@ -8,7 +8,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="py-12 px-6 border-t border-sepia/10">
+    <footer className="pt-12 pb-32 sm:pb-36 px-6 border-t border-sepia/10">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col items-center gap-6">
           {/* Social Links */}
