@@ -92,144 +92,137 @@ const Projects = () => {
   const projects: Project[] = [
     {
       title: "Addis Fetch",
-      category: "DECENTRALIZED COMMERCE // EXPORT DISPATCH",
+      category: "Mobile App • Peer-to-Peer Logistics",
       releaseDate: "JULY 2024",
-      description: "Bridges global flight routes to direct local shipping requests. Item seekers submit parameters while active travelers bid routes.",
-      details: "Addis Fetch scales international shipping networks by matching individual requests to immediate traveler routes. Constructed in React Native (Expo) and backed by optimized Firebase nodes, it implements off-grid offline support, real-time message sync, and coordinate flight logging. It successfully cuts standard forwarding costs by 70%.",
+      description: "Cross-border peer-to-peer delivery app connecting international travelers with local package shipping requests, cutting costs by 70%.",
+      details: "Addis Fetch is a cross-platform peer-to-peer logistics network that pairs global travelers with people looking to send or receive packages internationally. Built with React Native (Expo) and Firebase Realtime Database, it features offline-first message caching, flight coordinate tracking, and direct in-app communication, reducing traditional freight forwarding costs by 70%.",
       image: AddisFetch,
-      technologies: ["React Native", "Expo", "Firebase Backend", "Tailwind CSS"],
+      technologies: ["React Native", "Expo SDK", "Firebase Realtime DB", "Tailwind CSS"],
       github: "",
       demo: "https://addis-fetchet.onrender.com/",
       specs: {
-        "DRAFT SCHEMA": "COMPUTE // MOBILE",
-        "BUILDER VERSION": "v2.4.9-STABLE",
-        "TARGET FRAMEWORK": "EXPO SDK 51",
-        "API LAYER": "REALTIME CLOUD DB",
-        "ENCRYPTION KEY": "AES-256 SYSTEM"
+        "PLATFORM": "iOS & Android (Expo SDK 51)",
+        "BACKEND": "Firebase Realtime Database & Auth",
+        "KEY IMPACT": "70% Cost Reduction vs Traditional Shipping",
+        "STATUS": "Production / Live"
       }
     },
     {
       title: "ExitExamStudio",
-      category: "ACADEMIC TESTING // PREPARATION WIDGET",
+      category: "Full-Stack Web • EdTech Platform",
       releaseDate: "NOV 2025",
-      description: "Scale prep portal web engine serving 15,000+ national graduating university students. Resilient load under low-bandwidth networks.",
-      details: "ExitExamStudio supplies scalable digital prep desks for Ethiopian graduates. Engineered on Next.js server routers using a performance-tuned PostgreSQL state engine, the client delivers lightweight interactive worksheets and smart mock-rank trackers to verify student readiness. High availability on bandwidth-constrained local infrastructures.",
+      description: "National exam preparation platform serving 15,000+ graduating Ethiopian university students with mock tests and analytics under low-bandwidth networks.",
+      details: "ExitExamStudio is a high-traffic web platform built to help Ethiopian university graduates prepare for national qualification exams. Engineered with Next.js App Router, the system delivers lightweight interactive tests, timed mock examinations, and instant score ranking—specifically optimized to render fast under low-bandwidth local networks.",
       image: ExitLogo,
-      technologies: ["Next.js", "Tailwind CSS", "Prisma ORM", "PostgreSQL"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       demo: "https://exitexamstudio.app",
       github: "",
       specs: {
-        "DRAFT SCHEMA": "PREP // CORE SERVICE",
-        "ACTIVE SESSIONS": "15,000+ DRAFTS",
-        "BANDWIDTH BUDGET": "LIGHTWEIGHT STACK",
-        "RENDER SPEED": "94 / 100 LIGHTHOUSE",
-        "STATE MACHINE": "PRISMA HYBRID"
+        "USERS SERVED": "15,000+ Graduating Students",
+        "ARCHITECTURE": "Next.js Server Components",
+        "PERFORMANCE": "Optimized for Low-Bandwidth Networks",
+        "STATUS": "Active / In Production"
       }
     },
     {
-      title: "ETBX Coin Interface",
-      category: "STABLE DEFI LEDGER // PROTOCOL DRAFT",
+      title: "ETBX",
+      category: "Fintech & Web3 • Programmable Ethiopian Birr",
       releaseDate: "FEB 2026",
-      description: "Decentralized stable assets system dashboard permitting users to mint, redeem and transfer custom assets on BASE.",
-      details: "ETBX DeFi dashboard enables direct management of stable contracts on the BASE chain. Users connect smart wallets and interact directly with minting scripts. Features nested developer API tools and integrated TurboRepo pipelines to secure strict codebase architecture across dependencies.",
+      description: "Financial infrastructure built around programmable Ethiopian Birr on blockchain rails, pegged 1:1 to ETB for seamless on-chain settlement, minting, and transfers.",
+      details: "ETBX is a programmable financial infrastructure bringing the Ethiopian Birr onto blockchain rails. Pegged 1:1 to ETB, the protocol enables institutional and individual users to mint, redeem, and transfer digital Birr on the BASE network with instant finality, minimal transaction fees, and verifiable smart contract transparency. Engineered with Next.js, Solidity smart contracts, and TurboRepo monorepo tooling.",
       image: "",
-      technologies: ["Solidity", "NextJS", "BASE Blockchain", "TurboRepo SDK"],
+      technologies: ["Solidity", "Next.js", "BASE Blockchain (EVM)", "TurboRepo", "Wagmi / Viem"],
       demo: "https://etbx.vercel.app",
       github: "",
       specs: {
-        "DRAFT SCHEMA": "FINANCE // SOL STACK",
-        "LEDGER CHAIN": "BASE CHAIN EVM",
-        "MINT INSTRUCTION": "AUTO CONTRACT ASSET",
-        "LOCK STAGE": "MULTI-SIGN SCHEME",
-        "LATENCY SPEED": "EVM BLOCK DELAY"
+        "ASSET PEGGING": "1:1 Pegged to Ethiopian Birr (ETB)",
+        "NETWORK": "BASE Blockchain (EVM Layer 2)",
+        "CORE INFRASTRUCTURE": "Solidity Smart Contracts + Wagmi",
+        "USE CASES": "On-Chain Settlement, Minting, Transfers",
+        "STATUS": "Live Deployment"
       }
     },
     {
-      title: "TeleScribe Automated",
-      category: "TELEGRAM CHANNELS // TON NETWORK",
+      title: "TeleScribe",
+      category: "Fintech & Bot Infrastructure • TON & Stripe",
       releaseDate: "NOV 2024",
-      description: "Monetization engine syncing Telegram channel triggers with TON smart payments and Privy authorization systems.",
-      details: "TeleScribe automates client setups for digital publishers. Connecting Telegram webhooks via Telegraf automation triggers to TON wallet routers, the system provisions instant payload accesses. The platform also embeds Stripe checkouts for global card networks.",
+      description: "Telegram channel monetization engine syncing bot webhook triggers with TON crypto payments and Stripe card checkouts.",
+      details: "TeleScribe is an automated subscription management platform for digital content creators and community admins. By bridging Telegraf bot webhooks with TON blockchain smart contracts and Stripe payment portals, it automatically grants and manages private channel access upon verified payment.",
       image: Telescribe,
-      technologies: ["Next.js", "PostgreSQL", "TON Contract", "Telegraf API", "Privy Wallet"],
+      technologies: ["Next.js", "PostgreSQL", "TON Blockchain", "Telegraf API", "Privy Wallet", "Stripe"],
       demo: "",
       github: "",
       specs: {
-        "DRAFT SCHEMA": "AUTOMATION // WEBHOOK",
-        "CLIENT CONTROLLER": "TELEGRAF WORKER",
-        "BLOCKCHAIN MESH": "TON SMART MESH",
-        "GATEWAY OUT": "STRIPE SECURE SDK",
-        "USER VOLUME": "10K+ MAPPED NODES"
+        "BOT ENGINE": "Telegraf Webhook Worker",
+        "PAYMENT RAILS": "TON Crypto Wallet & Stripe SDK",
+        "DATABASE": "PostgreSQL",
+        "STATUS": "Active Integration"
       }
     },
     {
-      title: "Yagout payment SDK",
-      category: "PAYMENT INTEGRATION // DEVPACK MODULE",
+      title: "Yagout Payment SDK",
+      category: "Developer Tooling • TypeScript Package",
       releaseDate: "SEPT 2025",
-      description: "TypeScript developer SDK supporting payment aggregations, checkout portals, and custom web links.",
-      details: "Yagout payment SDK is a highly lightweight pack optimized for Next.js, Express, and NestJS runtimes. Zero exterior dependencies are implemented to ensure the script triggers checkouts with minimal memory consumption.",
+      description: "Lightweight, zero-dependency TypeScript SDK supporting payment aggregations, checkout portals, and webhook handlers.",
+      details: "A developer-focused payment processing library engineered for rapid integration into Node.js ecosystems. At only 4.2 KB with zero external dependencies, it provides clean, type-safe API abstractions for handling checkouts, webhooks, and status reconciliation across Next.js, Express, and NestJS runtimes.",
       image: "",
-      technologies: ["TypeScript Package", "Node.js Schema", "Yagout API Engine"],
+      technologies: ["TypeScript Package", "Node.js", "ESNext Modules", "RESTful APIs"],
       github: "",
       demo: "",
       specs: {
-        "DRAFT SCHEMA": "LIBRARY // COMPILE",
-        "BUNDLE SIZE": "4.2KB EXPEDITE",
-        "TARGET ENGINE": "ESNEXT MODULES",
-        "EXTERNAL LIBS": "ZERO DEPS INTEGRAL",
-        "STATUS LEVEL": "AUDITED PASS"
+        "BUNDLE SIZE": "4.2 KB (Zero External Dependencies)",
+        "SUPPORTED ENVS": "Next.js, Node.js, Express, NestJS",
+        "TYPE SAFETY": "100% Strict TypeScript Typing",
+        "STATUS": "Audited Developer Package"
       }
     },
     {
       title: "ProjeX Board",
-      category: "PRODUCTIVITY BOARD // REALTIME DOCK",
+      category: "SaaS Productivity • Real-Time Kanban",
       releaseDate: "AUG 2024",
-      description: "Interactive Kanban board designed with clean architecture rules, mapping live cards and sprint metrics.",
-      details: "ProjeX offers fluid coordinate tracking of sprints and engineering columns. Built with NextJS and Supabase real-time triggers, the board provides interactive drag animations (Framer Motion) that sync instantly across all clients.",
-      technologies: ["Next.js", "Supabase DB", "Framer Motion"],
+      description: "Collaborative agile sprint board featuring fluid drag-and-drop mechanics and instant multi-user real-time state synchronization.",
+      details: "ProjeX is a modern productivity and sprint tracking tool built for developer teams. Powered by Next.js and Supabase Realtime websocket channels, it delivers seamless drag-and-drop task management with Framer Motion animations and live multi-client updates with under 50ms latency.",
+      technologies: ["Next.js", "TypeScript", "Supabase DB", "Framer Motion", "Tailwind CSS"],
       github: "https://github.com/abuki43/ProjeX",
       demo: "",
       specs: {
-        "DRAFT SCHEMA": "REALTIME // MATRIX",
-        "TRIGGER CHANNEL": "SUPABASE SUBS",
-        "ANIMATION TYPE": "SPRING TRANSITION",
-        "REFLUX ROUTE": "MUTATION SHORD",
-        "COLLISION SAFE": "ACTIVE VERIFIED"
+        "REALTIME ENGINE": "Supabase WebSocket Subscriptions",
+        "UI INTERACTION": "Framer Motion Drag Physics",
+        "COLLABORATION": "Instant Multi-User Sync",
+        "STATUS": "Open Source on GitHub"
       }
     },
     {
       title: "QR-Hotel Desk",
-      category: "HOSPITALITY LEDGER // CLIENT TABLES",
+      category: "Hospitality POS • Real-Time Ordering",
       releaseDate: "JUNE 2024",
-      description: "Real-time tablet dispatcher syncing customer coordinates directly to kitchen monitors via WebSockets.",
-      details: "QR-Hotel Desk replaces legacy restaurant workflows. Guests compile menus at tables and trigger immediate kitchen payloads, integrated with Chapa developer links for local mobile money transactions.",
+      description: "Contactless digital ordering system linking table QR codes directly to kitchen monitors with integrated local mobile money checkout.",
+      details: "QR-Hotel Desk modernizes restaurant table service by allowing customers to scan QR codes, browse interactive digital menus, and submit kitchen orders directly from their phones. Integrated with WebSockets for instant kitchen dispatcher updates and Chapa payment API for seamless local digital transactions.",
       image: QrHotel,
       technologies: ["React", "Express APIs", "WebSocket Link", "Chapa Checkout"],
       github: "",
       demo: "",
       specs: {
-        "DRAFT SCHEMA": "COMMERCE // SOCKET",
-        "LOCAL OUTLET": "ADDIS OUTLETS",
-        "PING SPEED": "2.8ms DIRECT LAT",
-        "GATE PAY": "CHAPA PAYMENT GATE",
-        "DB ENGINE": "REDIS BUFFER SHRD"
+        "LATENCY": "Instant Kitchen Notification (<100ms)",
+        "PAYMENTS": "Chapa Mobile Money Integration",
+        "CLIENT INTERFACE": "Responsive Mobile Web App",
+        "STATUS": "Deployed Solution"
       }
     },
     {
       title: "USDCentral Wallet",
-      category: "CROSS-CHAIN ABSTRACT // EXPERIMENT",
+      category: "Web3 Mobile • Multi-Chain Gasless Wallet",
       releaseDate: "JAN 2026",
-      description: "Multi-chain abstracted gas-free wallet drafted for the ETHGlobal hackathon, eliminating native gas tokens.",
-      details: "USDCentral was created for the ETHGlobal hackathon. Using LiFi bridges and Curve routing, users interact with USDC across Base, Arbitrum, and Optimism networks without holding gas tokens. Circle smart SDK manages payload safety.",
+      description: "ETHGlobal hackathon project: Multi-chain smart wallet enabling gasless USDC transfers across Base, Arbitrum, and Optimism.",
+      details: "USDCentral was built for the ETHGlobal hackathon to simplify the cross-chain crypto experience. By abstracting gas tokens using LiFi routing and Circle smart contract payment sponsorship, users can transfer and swap USDC across Layer 2 networks without needing native ETH for gas.",
       image: USDCentral,
       technologies: ["React Native", "Expo Core", "LIFI SDK", "Circle Smart Pay"],
       github: "https://github.com/abuki43/USDCentral",
       specs: {
-        "DRAFT SCHEMA": "DEFI // RESEARCH DRAFT",
-        "LIQUID CHAIN": "BASE / ARB / OPT MESH",
-        "GAS SYSTEM": "GASLESS SPONSOR",
-        "HACKATHON": "ETHGLOBAL 2024",
-        "INTEROP CORE": "LIFI PROT CON"
+        "HACKATHON": "ETHGlobal 2024 Project",
+        "NETWORKS": "Base, Arbitrum, Optimism (Layer 2)",
+        "INNOVATION": "Gasless Account Abstraction",
+        "STATUS": "Open Source on GitHub"
       }
     }
   ];
@@ -260,15 +253,15 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <p className="caption mb-4">Draft Projects Portfolio</p>
+          <p className="caption mb-4">Selected Works & Production Systems</p>
           <h2 className="font-heading text-4xl md:text-5xl font-semibold text-primary letterpress">
-            {theme === "blueprint" ? "SCHEMATICS: DETAILED_COMPONENTS" : theme === "monospace" ? "PROJECT_INDEX.TXT" : "Blueprint Spec Sheets"}
+            {theme === "blueprint" ? "SCHEMATICS: FEATURED_PROJECTS" : theme === "monospace" ? "PROJECT_INDEX.TXT" : "Featured Projects"}
           </h2>
         </motion.div>
 
         <SectionDivider />
 
-        {/* 3D Tilt Project Cards Grid (inspired by 21st.dev matrix grids) */}
+        {/* 3D Tilt Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mt-8">
           {projects.map((project, index) => (
             <CardTilt
@@ -306,13 +299,13 @@ const Projects = () => {
               <div className="pt-3 border-t border-dashed border-primary/10 flex items-center justify-between mt-auto">
                 <div className="flex gap-2 text-[9px] font-mono text-secondary">
                   {project.technologies.slice(0, 2).map((tech, i) => (
-                    <span key={i} className="px-1 border border-primary/10 bg-primary/5 rounded-sm">
+                    <span key={i} className="px-1.5 py-0.5 border border-primary/10 bg-primary/5 rounded-sm">
                       {tech}
                     </span>
                   ))}
                 </div>
-                <span className="font-mono text-[10px] font-bold text-accent hover:underline">
-                  [ SPEC_DRAWER.EXE ]
+                <span className="font-mono text-[10px] font-bold text-accent hover:underline flex items-center gap-1">
+                  [ VIEW SPECS ↗ ]
                 </span>
               </div>
             </CardTilt>
@@ -350,7 +343,7 @@ const Projects = () => {
               <div className="p-6 border-b border-primary/15 bg-black/10 flex items-center justify-between">
                 <div>
                   <span className="text-[9px] uppercase tracking-widest text-secondary block font-bold">
-                    CAD DRAFT // PROJECT_SPEC
+                    PROJECT SPECIFICATION
                   </span>
                   <h3 className="font-heading text-2xl font-bold text-primary">
                     {activeProject.title}
@@ -386,20 +379,20 @@ const Projects = () => {
                 ) : (
                   <div className={`aspect-video w-full flex items-center justify-center border font-heading italic text-center p-4 border-dashed rounded-sm ${theme === "blueprint" ? "border-primary/20 bg-primary/5" : "border-sepia/15 bg-cream/10"
                     }`}>
-                    <span className="text-secondary/70 text-xs">// SCHEMATIC DIAGRAM: METRIC MISSING //</span>
+                    <span className="text-secondary/70 text-xs">// DIAGRAM: PRODUCTION SYSTEM SCHEMATIC //</span>
                   </div>
                 )}
 
                 {/* Analytical Specs Grid */}
                 <div className="border border-primary/15 rounded bg-black/10 overflow-hidden text-xs">
                   <div className="bg-primary/10 px-3 py-1.5 font-bold border-b border-primary/15 text-[10px] text-secondary uppercase">
-                    METADATA BLUEPRINT LOG
+                    SYSTEM SPECIFICATIONS
                   </div>
                   <div className="divide-y divide-primary/10">
                     {Object.entries(activeProject.specs).map(([key, val]) => (
                       <div key={key} className="flex justify-between p-2.5 font-mono">
                         <span className="text-secondary">{key}:</span>
-                        <span className="text-primary font-bold">{val}</span>
+                        <span className="text-primary font-bold text-right">{val}</span>
                       </div>
                     ))}
                   </div>
@@ -408,7 +401,7 @@ const Projects = () => {
                 {/* Text dispatch Column */}
                 <div className="space-y-3">
                   <span className="text-[10px] font-bold tracking-wider text-secondary uppercase block border-b border-primary/10 pb-1">
-                    PROJECT DISPATCH SUMMARY
+                    PROJECT OVERVIEW & ARCHITECTURE
                   </span>
                   <p className="text-xs leading-relaxed text-ink/90 text-justify">
                     {activeProject.details}
@@ -418,7 +411,7 @@ const Projects = () => {
                 {/* Runtime packages list */}
                 <div className="space-y-2">
                   <span className="text-[10px] font-bold tracking-wider text-secondary uppercase block border-b border-primary/10 pb-1">
-                    DEPLOYMENT RUNTIMES
+                    TECHNOLOGIES USED
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {activeProject.technologies.map((tech, i) => (
@@ -442,35 +435,35 @@ const Projects = () => {
               {/* Actions Footer block */}
               <div className="p-6 border-t border-primary/15 bg-black/10 flex flex-col gap-3">
                 <div className="text-[9px] text-secondary font-mono tracking-widest uppercase mb-1">
-                  EXECUTE LINKS COMMAND
+                  PROJECT LINKS & REPOSITORIES
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  {activeProject.github && (
-                    <a
-                      href={activeProject.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => playClick(1.25)}
-                      className={`w-full py-2 px-3 border border-primary/20 text-center rounded-sm text-xs font-mono font-bold hover:bg-primary/10 hover:border-primary transition-all text-primary cursor-none`}
-                    >
-                      $ git clone {activeProject.github}
-                    </a>
-                  )}
                   {activeProject.demo && (
                     <a
                       href={activeProject.demo}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => playClick(1.25)}
-                      className={`w-full py-2 px-3 border border-accent/20 text-center rounded-sm text-xs font-mono font-bold hover:bg-accent/10 hover:border-accent transition-all text-accent cursor-none`}
+                      className={`w-full py-2.5 px-3 border border-accent/30 text-center rounded-sm text-xs font-mono font-bold hover:bg-accent/15 hover:border-accent transition-all text-accent cursor-none flex items-center justify-center gap-1.5 shadow-sm`}
                     >
-                      $ curl -sSL {activeProject.demo}
+                      🚀 Launch Live Demo ↗
+                    </a>
+                  )}
+                  {activeProject.github && (
+                    <a
+                      href={activeProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => playClick(1.25)}
+                      className={`w-full py-2.5 px-3 border border-primary/25 text-center rounded-sm text-xs font-mono font-bold hover:bg-primary/15 hover:border-primary transition-all text-primary cursor-none flex items-center justify-center gap-1.5`}
+                    >
+                      💻 View Source Code (GitHub) ↗
                     </a>
                   )}
                   {!activeProject.github && !activeProject.demo && (
-                    <div className="text-xs italic text-secondary/60 text-center py-2 border border-dashed border-primary/10 rounded">
-                      🔒 ARCHIVED SECURITY SCHEME (SOURCE RESTRICTED)
+                    <div className="text-xs italic text-secondary/70 text-center py-2 border border-dashed border-primary/10 rounded">
+                      🔒 Enterprise / Private Client Repository (Available Upon Request)
                     </div>
                   )}
                 </div>

@@ -49,13 +49,13 @@ const About = () => {
     playBell();
 
     const diagnostics = [
-      "$ yarn run db:diagnose",
-      "📡 CONNECTING TO SERVER ARCHIVE ... CONNECTED",
-      "📊 POLLING PORTFOLIO API LATENCY... 12ms",
-      "💾 CHECKING SUPABASE CORE SCHEMAS... STABLE",
-      "🛡️ TON SMART CONTRACT INTERFACE... VERIFIED",
-      "🤖 TELEGRAM BOT CONTROLLERS: ACTIVE (5.2M messages/day)",
-      "☕ CPU LOAD: OPTIMIZED (2.4GHz) // COFFEE LEVEL: 85%"
+      "$ ping -c 3 services.abuki.tech",
+      "📡 CONNECTING TO PRODUCTION SERVICES ... OK",
+      "📊 API LATENCY BENCHMARK: 12ms (OPTIMIZED)",
+      "🚀 NEXT.JS & REACT NATIVE APPS: OPERATIONAL",
+      "💾 DATABASE & STORAGE ENGINE: STABLE",
+      "⚡ PRODUCTION DEPLOYMENTS: 15,000+ USERS SERVED",
+      "☕ STATUS: READY FOR NEW PROJECTS & ROLES"
     ];
 
     setConsoleLogs(["// SYSTEM LOG READY"]);
@@ -70,20 +70,20 @@ const About = () => {
 
   const skills = [
     {
-      category: "FRONT-END ARCHITECTURE",
-      items: ["React", "React Native", "Expo", "Next.js", "Tailwind CSS", "Framer Motion"]
+      category: "FRONTEND & MOBILE",
+      items: ["React.js", "React Native", "Expo", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
     },
     {
-      category: "BACK-END LEDGERS",
-      items: ["Node.js", "NestJS", "TypeScript", "Solidity (EVM)", "PostgreSQL", "MongoDB"]
+      category: "BACKEND & DATABASES",
+      items: ["Node.js", "NestJS", "Express", "PostgreSQL", "Prisma ORM", "MongoDB", "Supabase"]
     },
     {
-      category: "NETWORKS & APIS",
-      items: ["RESTful API", "WebSockets", "Supabase", "Web3 / dApps", "Stripe", "Chapa API"]
+      category: "APIS & WEB3",
+      items: ["RESTful APIs", "WebSockets", "Solidity (EVM)", "TON Blockchain", "Stripe API", "Chapa API"]
     },
     {
-      category: "AUTOMATION ENGINE",
-      items: ["Telegram API", "Telegraf CLI", "AI Integration", "Bash Scripting", "GitHub Actions", "Docker"]
+      category: "DEVOPS & AUTOMATION",
+      items: ["Telegram Bots", "AI Integration", "Docker", "GitHub Actions", "Linux / Bash", "TurboRepo"]
     }
   ];
 
@@ -98,9 +98,9 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <p className="caption mb-4">Biography & Uptime Specs</p>
+          <p className="caption mb-4">Background & Technical Foundation</p>
           <h2 className="font-heading text-4xl md:text-5xl font-semibold text-primary letterpress">
-            {theme === "blueprint" ? "STRUCTURAL_INDEX: ABOUT_BUILDER" : theme === "monospace" ? "BUILDER_SPEC.LOG" : "The Builder's Spec"}
+            {theme === "blueprint" ? "ENGINEERING_PROFILE: ABOUT_BUILDER" : theme === "monospace" ? "ABOUT_ENGINEER.TXT" : "About The Engineer"}
           </h2>
         </motion.div>
 
@@ -130,23 +130,23 @@ const About = () => {
 
             <div>
               <span className="caption text-[10px] block mb-3 font-semibold text-secondary">
-                BUILDER PROFILE SPEC
+                PROFILE OVERVIEW
               </span>
               <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary mb-4 leading-tight">
                 Abubeker Abe
               </h3>
 
-              <p className="font-body text-base leading-relaxed text-ink/90 text-justify mb-6">
-                A graduated Full-Stack Developer from **Addis Ababa University** specializing in drafting resilient custom architectures. My craft is dedicated to engineering reliable client modules, scaling backend integrations and scripting complex bots.
+              <p className="font-body text-base leading-relaxed text-ink/90 text-justify mb-4">
+                A Full-Stack Software Engineer and graduate of <span className="font-semibold text-primary">Addis Ababa University</span> with proven experience building high-performance web applications, cross-platform mobile apps, and scalable backend services.
               </p>
-              <p className="font-body text-sm leading-relaxed text-ink/80 text-secondary text-justify">
-                Drawing inspiration from structural cad drafts and digital building processes, I focus on coding with strict compilation compliance and clean functional flows.
+              <p className="font-body text-sm leading-relaxed text-ink/80 text-justify">
+                I focus on architecting type-safe, maintainable systems that solve real problems—ranging from educational platforms serving over 15,000 students to peer-to-peer logistics engines and automated bot integrations.
               </p>
             </div>
 
             <div className="mt-8 pt-4 border-t border-primary/10 flex items-center justify-between text-[10px] font-caption text-secondary">
-              <span>GRADUATE: ADDIS ABABA UNIVERSITY</span>
-              <span className="font-mono">VERIFIED ARCHITECTURE</span>
+              <span>ALUMNI: ADDIS ABABA UNIVERSITY</span>
+              <span className="font-mono text-emerald-500 font-bold">● OPEN TO WORK</span>
             </div>
           </motion.div>
 
@@ -271,7 +271,7 @@ const About = () => {
               }`}
           >
             <span className="caption text-[10px] block mb-4 font-semibold text-secondary">
-              CORE CAPABILITIES // BLUEPRINT MATRICE
+              CORE TECHNICAL SKILLS & EXPERTISE
             </span>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">

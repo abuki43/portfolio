@@ -47,9 +47,9 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <p className="caption mb-4">Transmission Port</p>
+          <p className="caption mb-4">Start a Conversation or Project</p>
           <h2 className="font-heading text-4xl md:text-5xl font-semibold text-primary letterpress">
-            {theme === "blueprint" ? "PLAN_CONNECTION: SUBMIT_PAYLOAD" : theme === "monospace" ? "CONNECT_PORT.EXE" : "Launch Dispatch"}
+            {theme === "blueprint" ? "DISPATCH_TERMINAL: GET_IN_TOUCH" : theme === "monospace" ? "CONTACT_PORT.EXE" : "Get In Touch"}
           </h2>
         </motion.div>
 
@@ -76,10 +76,10 @@ const Contact = () => {
               <span className="w-2.5 h-2.5 rounded-full bg-green-500/80 inline-block" />
             </div>
             <span className="text-[10px] text-secondary font-bold font-mono uppercase tracking-wider">
-              abuki@blueprint-node:~
+              abubeker@portfolio-node:~
             </span>
-            <span className="text-[9px] px-2 py-0.5 border border-primary/15 bg-black/10 rounded font-bold">
-              SYS: CLOUD_LOG
+            <span className="text-[9px] px-2 py-0.5 border border-primary/15 bg-black/10 rounded font-bold text-emerald-500">
+              ● AVAILABLE
             </span>
           </div>
 
@@ -94,7 +94,9 @@ const Contact = () => {
                 className="space-y-5"
               >
                 <div>
-                  <span className="text-secondary block mb-1 font-bold">abuki43:~$ ./set_parameters --name</span>
+                  <label className="text-secondary block mb-1 font-bold text-[10px] uppercase">
+                    01. Your Name / Organization
+                  </label>
                   <div className="flex items-center gap-2">
                     <span className="text-primary font-bold">{">"}</span>
                     <input
@@ -103,14 +105,16 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Insert your identity..."
+                      placeholder="e.g. Alex Johnson (Acme Corp)"
                       className="bg-transparent border-b border-primary/20 focus:border-primary outline-none py-1 w-full text-primary font-mono placeholder:text-secondary/40 cursor-none"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <span className="text-secondary block mb-1 font-bold">abuki43:~$ ./set_parameters --email</span>
+                  <label className="text-secondary block mb-1 font-bold text-[10px] uppercase">
+                    02. Your Email Address
+                  </label>
                   <div className="flex items-center gap-2">
                     <span className="text-primary font-bold">{">"}</span>
                     <input
@@ -119,14 +123,16 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="Insert your mailbox..."
+                      placeholder="e.g. alex@example.com"
                       className="bg-transparent border-b border-primary/20 focus:border-primary outline-none py-1 w-full text-primary font-mono placeholder:text-secondary/40 cursor-none"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <span className="text-secondary block mb-1 font-bold">abuki43:~$ ./set_parameters --payload</span>
+                  <label className="text-secondary block mb-1 font-bold text-[10px] uppercase">
+                    03. Message / Project Details
+                  </label>
                   <div className="flex items-start gap-2">
                     <span className="text-primary mt-1 font-bold">{">"}</span>
                     <textarea
@@ -135,7 +141,7 @@ const Contact = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Compile message body payload..."
+                      placeholder="Briefly describe your project, timeline, or job inquiry..."
                       className="bg-transparent border-b border-primary/20 focus:border-primary outline-none py-1 w-full text-primary font-mono placeholder:text-secondary/40 resize-none h-20 cursor-none"
                     />
                   </div>
@@ -144,19 +150,19 @@ const Contact = () => {
                 {/* Submit command line */}
                 <div className="pt-3 flex justify-between items-center border-t border-primary/10 select-none">
                   <span className="text-[10px] text-secondary">
-                    LOG: PARAMS READY FOR BROADCAST
+                    READY TO DISPATCH
                   </span>
                   <button
                     type="submit"
                     onMouseEnter={() => playClick(1.05)}
-                    className={`px-4 py-2 border rounded-sm font-bold text-[11px] transition-colors cursor-none ${theme === "blueprint"
+                    className={`px-4 py-2 border rounded-sm font-bold text-[11px] transition-colors cursor-none flex items-center gap-1.5 shadow-sm ${theme === "blueprint"
                         ? "border-primary/30 text-primary hover:bg-primary/15"
                         : theme === "monospace"
                           ? "border-secondary/40 text-secondary hover:text-primary hover:border-primary"
                           : "border-sepia/30 text-sepia hover:bg-cream"
                       }`}
                   >
-                    $ ./send_payload.sh
+                    🚀 Send Message ↗
                   </button>
                 </div>
               </motion.form>
@@ -176,9 +182,9 @@ const Contact = () => {
                   <span className="w-1.5 h-1.5 bg-accent rounded-full animate-bounce" />
                 </div>
                 <div className="text-center font-mono space-y-2">
-                  <p className="text-primary font-bold">TRANSMITTING PACKETS...</p>
+                  <p className="text-primary font-bold">TRANSMITTING MESSAGE...</p>
                   <p className="text-secondary/70 text-[10px]">
-                    Connecting mailserver: abubeker4310@gmail.com
+                    Directing dispatch to abubeker4310@gmail.com
                   </p>
                 </div>
               </motion.div>
@@ -193,21 +199,19 @@ const Contact = () => {
                 className="py-6 space-y-6 font-mono"
               >
                 <div className="border border-green-500/30 bg-green-500/5 p-4 rounded text-emerald-500">
-                  <span className="font-bold block mb-1">=== DISPATCH LOG: SUCCESS ===</span>
-                  <p className="text-[10px] leading-relaxed text-secondary-alt">
-                    Your message packet has successfully cleared target queues.
-                    Routing protocols verified.
-                    Response expected inside 24 hours.
+                  <span className="font-bold block mb-1">=== MESSAGE DELIVERED SUCCESSFULLY ===</span>
+                  <p className="text-[11px] leading-relaxed text-secondary-alt">
+                    Thank you for reaching out! Your message packet has been transmitted. I typically respond within 24 hours.
                   </p>
                 </div>
 
                 {/* Simulated shell execution layout output */}
                 <div className="p-4 bg-black/20 rounded border border-primary/10 text-secondary leading-relaxed">
                   <p>$ whoami</p>
-                  <p className="text-primary">abuki_guest</p>
-                  <p>$ status_check --target mailserver.agent.internal</p>
-                  <p className="text-green-500">[OK] Packet size: 2.14KB dispatched.</p>
-                  <p className="text-green-500">[OK] Delivery channel secured.</p>
+                  <p className="text-primary">Guest Visitor</p>
+                  <p>$ status_check --target abubeker4310@gmail.com</p>
+                  <p className="text-green-500">[OK] Message delivered to inbox.</p>
+                  <p className="text-green-500">[OK] Confirmation logged.</p>
                 </div>
 
                 <div className="flex justify-end select-none">
@@ -216,7 +220,7 @@ const Contact = () => {
                     onMouseEnter={() => playClick(1.05)}
                     className="px-3.5 py-1.5 border border-primary/20 hover:border-primary text-primary transition-colors text-[10px] font-bold cursor-none"
                   >
-                    [ CLEAR_LOG.COM ]
+                    [ Send Another Message ]
                   </button>
                 </div>
               </motion.div>
@@ -225,21 +229,34 @@ const Contact = () => {
         </motion.div>
 
         {/* Quick info grid */}
-        <div className="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-dashed border-primary/15 font-mono text-[10px] text-secondary">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-dashed border-primary/15 font-mono text-[10px] text-secondary">
           <div>
-            <span className="block font-bold">DIRECT MAIL:</span>
-            <a
-              href="mailto:abubeker4310@gmail.com"
-              onMouseEnter={() => playClick(1.05)}
-              onClick={() => playBell()}
-              className="text-primary hover:underline cursor-none"
-            >
-              abubeker4310@gmail.com
-            </a>
+            <span className="block font-bold mb-1">DIRECT EMAIL & TELEGRAM:</span>
+            <div className="flex flex-col gap-1">
+              <a
+                href="mailto:abubeker4310@gmail.com"
+                onMouseEnter={() => playClick(1.05)}
+                onClick={() => playBell()}
+                className="text-primary hover:underline cursor-none"
+              >
+                ✉️ abubeker4310@gmail.com
+              </a>
+              <a
+                href="https://t.me/ABking1"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => playClick(1.05)}
+                onClick={() => playBell()}
+                className="text-primary hover:underline cursor-none"
+              >
+                💬 Telegram: @ABking1
+              </a>
+            </div>
           </div>
-          <div className="text-right">
-            <span className="block font-bold">STATUS TELEMETRY:</span>
-            <span className="text-green-500">SYS_CONNECTED // FREELANCE_ON</span>
+          <div className="sm:text-right">
+            <span className="block font-bold mb-1">LOCATION & STATUS:</span>
+            <span className="text-primary block">Addis Ababa, Ethiopia</span>
+            <span className="text-emerald-500 font-bold">● Available for Full-Time & Freelance</span>
           </div>
         </div>
       </div>

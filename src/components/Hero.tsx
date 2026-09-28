@@ -15,7 +15,7 @@ const Hero = () => {
   const springX = useSpring(mouseX, { stiffness: 250, damping: 25 });
   const springY = useSpring(mouseY, { stiffness: 250, damping: 25 });
 
-  const [coords, setCoords] = useState({ x: 0, y: 0 });
+  const coordsRef = useRef<HTMLDivElement | null>(null);
   const [showRulers, setShowRulers] = useState(false);
 
   useEffect(() => {
@@ -40,14 +40,16 @@ const Hero = () => {
 
     mouseX.set(relativeX);
     mouseY.set(relativeY);
-    setCoords({ x: Math.round(relativeX), y: Math.round(relativeY) });
+    if (coordsRef.current) {
+      coordsRef.current.textContent = `x: ${Math.round(relativeX)}px | y: ${Math.round(relativeY)}px`;
+    }
   };
 
   const socialLinks = [
-    { name: "LINKEDIN.COM", url: "https://www.linkedin.com/in/abubeker-abe-bb2325285?" },
-    { name: "TELEGRAM.NET", url: "https://t.me/ABking1" },
-    { name: "INSTAGRAM.ORG", url: "https://www.instagram.com/abuki431/" },
-    { name: "GITHUB.SYS", url: "https://github.com/abuki43" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/abubeker-abe-bb2325285?" },
+    { name: "GitHub", url: "https://github.com/abuki43" },
+    { name: "Telegram", url: "https://t.me/ABking1" },
+    { name: "Instagram", url: "https://www.instagram.com/abuki431/" },
   ];
 
   const schemas = {
@@ -81,6 +83,7 @@ const Hero = () => {
 
           {/* Coordinate overlay floating near crosshair */}
           <motion.div
+            ref={coordsRef}
             className="absolute text-[8px] font-mono pointer-events-none px-1.5 py-0.5 rounded select-none z-10 border border-primary/25 bg-paper-alt opacity-70"
             style={{
               left: springX,
@@ -89,7 +92,7 @@ const Hero = () => {
               y: 12
             }}
           >
-            x: {coords.x}px | y: {coords.y}px
+            x: 0px | y: 0px
           </motion.div>
         </>
       )}
@@ -103,7 +106,7 @@ const Hero = () => {
         >
           {/* Slogan */}
           <span className="caption text-[10px] font-mono tracking-[0.25em] mb-3 text-secondary text-center block">
-            {schemas[theme]} // STATUS: ONLINE_VERIFIED
+            {schemas[theme]} // STATUS: ONLINE & READY
           </span>
 
           {/* Big Architecture Title block (CAD Header Grid) */}
@@ -119,14 +122,18 @@ const Hero = () => {
             </div>
 
             <h1
-              className={`font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-none mb-3 letterpress whitespace-nowrap ${theme === "monospace" ? "font-mono" : ""
+              className={`font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary tracking-tight leading-none mb-2 letterpress whitespace-nowrap ${theme === "monospace" ? "font-mono" : ""
                 }`}
             >
-              Developer.Abubeker Abe
+              Abubeker Abe
             </h1>
 
-            <p className="font-mono text-xs text-secondary/85 leading-relaxed max-w-2xl uppercase mx-auto text-center">
-              Full-Stack digital builder crafting production specifications using React Native, Next.js and automated system nodes.
+            <div className="font-mono text-xs sm:text-sm font-semibold text-accent tracking-wider uppercase mb-2">
+              Full-Stack Software Engineer & Mobile Developer
+            </div>
+
+            <p className="font-mono text-xs text-secondary/90 leading-relaxed max-w-2xl mx-auto text-center">
+              Building fast, scalable web applications and cross-platform mobile experiences with React Native, Next.js, TypeScript, and robust backend systems.
             </p>
           </div>
 
@@ -134,9 +141,9 @@ const Hero = () => {
           <div className="border-b border-x border-primary/25 px-6 py-3 flex flex-wrap justify-between items-center text-[10px] font-mono tracking-wider text-secondary font-bold uppercase gap-2 bg-paper-alt/10">
             <div>INDEX NO. 043</div>
             <div className="hidden md:block">LOC: ADDIS ABABA, ETHIOPIA</div>
-            <div>DRAFT_DATE: {currentDate || "JUL 28, 2026"}</div>
-            <div className="hidden md:block">THERMO: STABLE // 22°C</div>
-            <div>STATUS: COMPILE_OK</div>
+            <div>DRAFT_DATE: {currentDate || "OCT 2026"}</div>
+            <div className="hidden md:block">OPEN TO: REMOTE & HYBRID</div>
+            <div className="text-emerald-500 font-bold">STATUS: AVAILABLE FOR HIRE</div>
           </div>
 
           {/* Drafting Columns details */}
@@ -145,13 +152,13 @@ const Hero = () => {
             {/* Column 1: Core System overview */}
             <div className="md:col-span-5 flex flex-col justify-start">
               <span className="text-[9px] font-mono text-secondary uppercase font-bold mb-2">
-                [SECTION 01: SYSTEM CORE SUMMARY]
+                [SECTION 01: CORE EXPERTISE]
               </span>
               <h3 className="font-heading text-lg md:text-xl font-bold text-primary mb-3">
-                Digital Engineering Dispatch
+                Full-Stack & Mobile Engineering
               </h3>
               <p className="font-body text-sm text-ink/90 leading-relaxed text-justify">
-                Drawing blueprints for digital systems requires robust, stable codebases. I build frontend web elements, deploy cross-platform React Native apps, and manage backend database nodes that run continuously under production metrics.
+                Specialized in architecting end-to-end applications from responsive frontend interfaces to resilient backend APIs. Experienced in shipping cross-platform mobile apps with React Native, high-performance Next.js web applications, and database architectures serving thousands of active users.
               </p>
             </div>
 
@@ -178,20 +185,20 @@ const Hero = () => {
                 </div>
               </div>
               <span className="caption text-[8px] text-center mt-2 text-secondary/65 italic">
-                Fig 01. Compass Calibration
+                Fig 01. Precision Architecture
               </span>
             </div>
 
             {/* Column 3: Tech details & PDF download */}
             <div className="md:col-span-4 flex flex-col justify-start">
               <span className="text-[9px] font-mono text-secondary uppercase font-bold mb-2">
-                [SECTION 02: TECHNICAL STACK]
+                [SECTION 02: SPECIALIZATIONS]
               </span>
               <h3 className="font-heading text-lg md:text-xl font-bold text-primary mb-3">
-                Functional Methodologies
+                Modern Stack & Tooling
               </h3>
               <p className="font-body text-xs text-ink/80 leading-relaxed text-justify mb-4">
-                Ensuring type-safety, fast request delivery, and stable server logs. Expert in developing custom software, Web3 dApps, Solidity smart contracts, and AI agent integrations.
+                Proficient in TypeScript, React, React Native, Node.js, PostgreSQL, and Web3 / DeFi protocols. Focused on writing type-safe, maintainable code with strict performance budgets and intuitive UX.
               </p>
 
               {/* PDF Blueprint Download button */}
@@ -201,9 +208,9 @@ const Hero = () => {
                   download
                   onClick={() => playClick(1.3)}
                   onMouseEnter={() => playClick(1.05)}
-                  className={`inline-block text-xs font-mono font-bold text-accent hover:underline flex items-center gap-1 cursor-none`}
+                  className={`inline-block text-xs font-mono font-bold text-accent hover:underline flex items-center gap-1.5 cursor-none`}
                 >
-                  🖨️ DOWNLOAD_SPEC_SHEET.PDF
+                  📄 DOWNLOAD RESUME / CV (PDF) ↗
                 </a>
               </div>
             </div>
@@ -213,9 +220,9 @@ const Hero = () => {
           {/* Social connections ledger bottom line */}
           <div className="flex flex-wrap justify-between items-center gap-4 text-xs font-mono text-secondary/85 py-1">
             <span className="text-[9px] font-mono uppercase hidden sm:inline">
-              // TECHNICAL STACK CONNECT CHANNELS
+              // CONNECT & SOCIAL PROFILES
             </span>
-            <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <div className="flex flex-wrap gap-x-6 gap-y-1">
               {socialLinks.map((link) => (
                 <a
                   key={link.name}
@@ -224,9 +231,9 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   onClick={() => playClick(1.25)}
                   onMouseEnter={() => playClick(1.05)}
-                  className="hover:text-primary transition-colors hover:underline cursor-none"
+                  className="hover:text-primary transition-colors hover:underline cursor-none flex items-center gap-1"
                 >
-                  🗀 {link.name}
+                  ↗ {link.name}
                 </a>
               ))}
             </div>
