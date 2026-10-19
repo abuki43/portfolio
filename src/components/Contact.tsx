@@ -242,14 +242,14 @@ const Contact = () => {
                 ✉️ abubeker4310@gmail.com
               </a>
               <a
-                href="https://t.me/ABking1"
+                href="https://t.me/Abuki404"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => playClick(1.05)}
                 onClick={() => playBell()}
                 className="text-primary hover:underline cursor-none"
               >
-                💬 Telegram: @ABking1
+                💬 Telegram: @Abuki404
               </a>
             </div>
           </div>

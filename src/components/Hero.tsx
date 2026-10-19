@@ -48,7 +48,7 @@ const Hero = () => {
   const socialLinks = [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/abubeker-abe-bb2325285?" },
     { name: "GitHub", url: "https://github.com/abuki43" },
-    { name: "Telegram", url: "https://t.me/ABking1" },
+    { name: "Telegram", url: "https://t.me/Abuki404" },
     { name: "Instagram", url: "https://www.instagram.com/abuki431/" },
   ];
 

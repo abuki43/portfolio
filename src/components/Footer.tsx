@@ -4,7 +4,7 @@ const Footer = () => {
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/abuki43" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/abubeker-abe-bb2325285?" },
-    { name: "Telegram", url: "https://t.me/ABking1" },
+    { name: "Telegram", url: "https://t.me/Abuki404" },
   ];
 
   return (
